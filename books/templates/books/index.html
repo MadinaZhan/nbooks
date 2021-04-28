@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+          {{ title }}
+        </div>
+        {% for i in data2 %}
+        <div class="card-body">
+          <h5 class="card-title">{{ i.title }}</h5>
+          <p class="card-text">{{ i.content }}</p>
+          <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+        <div class="card-footer text-muted">
+            {{item.created_at|date:"Y-m-d H:i"}}
+        </div>
+        {% endfor %}
+      </div>
+</body>
+</html>
